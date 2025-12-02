@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    body { font-family: Arial, sans-serif; padding: 30px; color: #222; }
+    .header { display:flex; justify-content:space-between; align-items:start; }
+    .title { font-size:48px; color:#22a79b; font-weight:700; line-height:0.9; }
+    .voucher-box { border:3px solid #22a79b; padding:20px; font-size:16px; margin-top:30px; }
+    .label { color:#22a79b; font-weight:bold; display:inline-block; width:140px; }
+    .value { font-weight:600; display:inline-block; }
+    .terms-title { color:#c69c2c; font-size:20px; margin-top:25px; font-weight:bold; }
+    .terms-text { font-size:13px; line-height:1.4; }
+    .small { font-size:12px; color:#555; }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="{{logo_path}}" width="150" style="object-fit:contain;">
+    <div style="text-align:right;">
+        <div class="title">GIFT</div>
+        <div class="title" style="margin-top:-10px;">VOUCHER</div>
+    </div>
+</div>
+
+<div class="voucher-box">
+    <p><span class="label">Voucher No:</span> <span class="value">{{voucher_no}}</span></p>
+    <p><span class="label">Invoice No:</span> <span class="value">{{invoice_no}}</span></p>
+    <p><span class="label">Treatment:</span> <span class="value">{{treatment}}</span></p>
+    <p><span class="label">Expiry Date:</span> <span class="value">{{expiry}}</span></p>
+    <p><span class="label">From:</span> <span class="value">{{from}}</span></p>
+    <p><span class="label">To:</span> <span class="value">{{to}}</span></p>
+    <p><span class="label">Message:</span> <span class="value">{{message}}</span></p>
+</div>
+
+<div class="terms-title">Terms & Conditions</div>
+<div class="terms-text">
+{{terms}}
+</div>
+
+<div style="margin-top:30px;" class="small">Generated: {{generated_at}}</div>
+
+</body>
+</html>
